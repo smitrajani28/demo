@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+    <div class="paras">
+        <h4 class="" id="java">form using POST method</h4><br>
+        
+        <form method="post" action="{% url 'save_data' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              {% comment %} {{form}} {% endcomment %}
+          <label class="" for="">name :</label>
+          <input type="text" class="form-control-file" name="name" value="{{name}}" id="" placeholder="" aria-describedby="fileHelpId"><br><br>
+          <label class="" for="">Email :</label>
+          <input type="text" class="form-control-file" name="email" value="{{email}}" id="" placeholder="" aria-describedby="fileHelpId"><br><br>
+          <label class="" for="">Number :</label>
+          <input type="text" class="form-control-file" name="number" value="{{number}}" id="" placeholder="" aria-describedby="fileHelpId"><br><br>
+          <label class="" for="">address :</label>
+          <input type="text" class="form-control-file" name="address" value="{{address}}" id="" placeholder="" aria-describedby="fileHelpId"><br><br>
+          <div>
+            <button type="submit">submit</button>
+          </div>
+        </div>
+    </form>
+        
+</div>
+</section>
+{% endblock content %}

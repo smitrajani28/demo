@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div>
+            {% for items in clist %}
+            {{forloop.counter}}.{{items}}<br>
+            {% endfor %}
+        </div>
+        <hr>
+        <div>
+            <table border='1'>
+                <tr style="background-color: magenta">
+                    <th >name</th>
+                    <th>no.</th>
+                </tr>
+                {% for items in tables %}
+                <tr class="table">
+                    <td>{{items.name}}</td>
+                    <td>{{items.no}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <hr>
+        <div>
+            {% for i in number %}
+            {% if i > 30 %}
+            above 30 : {{i}}
+            {% else  %}
+            below 30 : {{i}}
+            {% endif %}
+            <br>
+            {% endfor %}
+         </div>
+    </body>
+</html>

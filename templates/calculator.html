@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+    <div class="paras">
+        <h1 class="sectionTag text-big" id="java">Java</h1>
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              {{form}}
+          <div>
+            <button type="submit">submit</button>
+          </div>
+          <div>
+            {% comment %} <p>your data is
+                name:{{name}}<br>
+                email:{{email}}<br>
+            </p> {% endcomment %}
+          </div>
+        </div>
+    </form>
+    <div>
+        <p>your Ans is {{result}}<br>
+        </p>
+      </div>
+</section>
+{% endblock content %}
